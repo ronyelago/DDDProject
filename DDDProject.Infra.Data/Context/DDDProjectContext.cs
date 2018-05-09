@@ -32,7 +32,7 @@ namespace DDDProject.Infra.Data.Context
                 .Configure(p => p.HasMaxLength(100));
 
             //Diz para o EF usar a classes de configurações personalizadas
-            modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new ClienteConfiguration()); 
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
         }
 
