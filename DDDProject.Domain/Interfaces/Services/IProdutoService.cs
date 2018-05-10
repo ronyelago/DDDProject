@@ -1,9 +1,9 @@
 ﻿using DDDProject.Domain.Entities;
 using System.Collections.Generic;
 
-namespace DDDProject.Domain.Interfaces
+namespace DDDProject.Domain.Interfaces.Services
 {
-    public interface IProdutoRepository : IRepositoryBase<Produto>
+    public interface IProdutoService : IServiceBase<Produto>
     {
         IEnumerable<Produto> BuscarPorNome(string nome);
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DDDProject.Domain.Entities;
-using DDDProject.Domain.Interfaces;
+using DDDProject.Domain.Interfaces.Repositories;
 
 namespace DDDProject.Infra.Data.Repositories
 {
