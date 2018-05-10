@@ -3,3 +3,4 @@ C:\Jobs\DDDProject\DDDProject.Application\bin\Debug\DDDProject.Application.pdb
 C:\Jobs\DDDProject\DDDProject.Application\obj\Debug\DDDProject.Application.csproj.CoreCompileInputs.cache
 C:\Jobs\DDDProject\DDDProject.Application\obj\Debug\DDDProject.Application.dll
 C:\Jobs\DDDProject\DDDProject.Application\obj\Debug\DDDProject.Application.pdb
+C:\Jobs\DDDProject\DDDProject.Application\obj\Debug\DDDProject.Application.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using DDDProject.Domain.Entities;
+﻿using System.Collections.Generic;
+using DDDProject.Domain.Entities;
 using DDDProject.Domain.Interfaces.Repositories;
 
 namespace DDDProject.Domain.Services
@@ -10,6 +11,11 @@ namespace DDDProject.Domain.Services
         public ProdutoService(IProdutoRepository produtoRepository) : base(produtoRepository)
         {
             _produtoRepository = produtoRepository;
+        }
+
+        public IEnumerable<Produto> BuscarPorNome(string nome)
+        {
+            return _produtoRepository.BuscarPorNome(nome);
         }
     }
 }
