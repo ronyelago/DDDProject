@@ -203,10 +203,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Clientes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -225,6 +226,10 @@
     <ProjectReference Include="..\DDDProject.Domain\DDDProject.Domain.csproj">
       <Project>{F608ECB8-C89B-42FC-94C3-F88838A76901}</Project>
       <Name>DDDProject.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDProject.Infra.Data\DDDProject.Infra.Data.csproj">
+      <Project>{25D8E67B-EB93-4805-9664-D42013301CBB}</Project>
+      <Name>DDDProject.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,13 +1,22 @@
-﻿using System.Web.Mvc;
+﻿using AutoMapper;
+using DDDProject.Domain.Entities;
+using DDDProject.Infra.Data.Repositories;
+using DDDProject.MVC.ViewModels;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace DDDProject.MVC.Controllers
 {
     public class ClientesController : Controller
     {
+        private readonly ClienteRepository clienteRepository = new ClienteRepository();
+
         // GET: Clientes
         public ActionResult Index()
         {
-            return View();
+            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(clienteRepository.GetAll());
+
+            return View(clienteViewModel);
         }
 
         // GET: Clientes/Details/5
@@ -24,18 +33,17 @@ namespace DDDProject.MVC.Controllers
 
         // POST: Clientes/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ClienteViewModel clienteViewModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(clienteViewModel);
+                clienteRepository.Add(clienteDomain);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(clienteViewModel);
         }
 
         // GET: Clientes/Edit/5
